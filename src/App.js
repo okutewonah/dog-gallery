@@ -7,7 +7,7 @@ import Wave from 'react-wavify'
 
 function App() {
   const [dogs, setDogs] = useState([]);
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1)
   const [dogsPerPage] = useState(12)
 
@@ -17,7 +17,7 @@ function App() {
 
       // console.log(response.data);
       setDogs(response.data)
-      // setIsLoading(false)
+      setIsLoading(false)
     }
     fetchDogs();
   },[dogs])
@@ -40,7 +40,7 @@ function App() {
         </defs>
       </Wave>
       <h1 className='text-uppercase my-lg-5 font-weight-bold'>Dog Gallery</h1>
-      <BreedGrid dogs={currentPages} />
+      <BreedGrid dogs={currentPages} isLoading={isLoading} />
       <Pagination dogsPerPage={dogsPerPage} totalDogs={dogs.length} paginate={paginate} />
     </div>
   );
