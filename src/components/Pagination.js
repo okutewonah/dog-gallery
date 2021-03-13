@@ -8,12 +8,12 @@ const Pagination = ({ dogsPerPage, totalDogs, paginate }) => {
   }
   return (
     <nav>
-      <ul className="pagination">
+      <ul className="pagination justify-content-center">
         {pageNumbers.map(number => (
           <li key={number} className='page-item'>
-            <a onClick={() => paginate(number)} href="!#" className="page-link">
+            <button onClick={() => paginate(number)} className="page-link mx-1">
               {number}
-            </a>
+            </button>
           </li>
         ))}
       </ul>
