@@ -16,6 +16,4 @@
 ```
 Or preview [here](https://doglery.netlify.app/)
 
-> Ignore the fiery effect at the top. Lol, it was just for fun.
-
 > API call is from [https://api.thedogapi.com/v1/breeds/](https://api.thedogapi.com/v1/breeds/)
